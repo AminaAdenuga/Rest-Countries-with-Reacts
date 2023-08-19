@@ -7,6 +7,8 @@ import FormInput from "./form";
 import { Link } from "react-router-dom";
 function CountryCards() {
   const [countries, setCountries] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState("");
 
   const getMycountries = async () => {
     try {
@@ -14,8 +16,10 @@ function CountryCards() {
       if (!response.ok) throw new Error("Not found in any country!");
       const data = await response.json();
       setCountries(data);
+      setIsLoading(false);
     } catch (error) {
-      console.error("Error fetching data:", error);
+      setIsLoading(false);
+      setError(error.message);
     }
   };
   useEffect(() => {
@@ -28,9 +32,11 @@ function CountryCards() {
       if (!res.ok) throw new Error("Not found in any country!");
       const data = await res.json();
       setCountries(data);
+      setIsLoading(false);
       console.log(countries);
     } catch (error) {
-      console.error("Error fetching data:", error);
+      setIsLoading(false);
+      setError(error.message);
     }
   };
 
@@ -42,8 +48,10 @@ function CountryCards() {
       if (!res.ok) throw new Error("Not found in any country!");
       const data = await res.json();
       setCountries(data);
+      setIsLoading(false);
     } catch (error) {
-      console.error("Error fetching data:", error);
+      setIsLoading(false);
+      setError(error.message);
     }
   };
 
@@ -53,7 +61,8 @@ function CountryCards() {
         <FormInput sendSearchParam={searchParam} />
         <Dropdown onSelect={getCountryByRegion} />
       </div>
-
+      {isLoading && !error && <h4>Loading......</h4>}
+      {error && !isLoading && <h4>{error}</h4>}
       {countries && (
         <div className="card-container">
           {countries.map((country) => (
