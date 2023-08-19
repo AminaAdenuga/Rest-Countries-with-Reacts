@@ -1,0 +1,49 @@
+/* stylesheet for header */
+
+.App {
+  overflow: hidden;
+  top: 0;
+  width: 100%;
+  position: fixed;
+  color: var(--body_color);
+  background-color: var(--body_elementsbg);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  padding: 1.5rem 0;
+}
+
+.h1-text {
+  font-size: 22px;
+}
+.header-div {
+  max-width: 80%;
+  margin: 0 auto;
+}
+.header-span {
+  display: flex;
+  gap: 10px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .h1-text {
+    font-size: 14px;
+  }
+  .header-span {
+    display: flex;
+    gap: 5px;
+  }
+  .icon-light {
+    font-size: 15px;
+  }
+  .header-div {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  body {
+    font-size: 62.5%;
+  }
+}

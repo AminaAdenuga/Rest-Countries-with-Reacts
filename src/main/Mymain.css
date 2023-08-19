@@ -1,0 +1,61 @@
+/* stylesahhet */
+
+.input-search-dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-div {
+  max-width: 80%;
+  margin: 6rem auto;
+}
+form {
+  display: flex;
+  gap: 12px;
+  padding: 15px;
+  color: var(--body_color);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  width: 400px;
+  background-color: var(--body_elementsbg);
+  border-radius: 5px;
+}
+.input {
+  border: none;
+  background-color: var(--body_elementsbg);
+  outline: none;
+}
+.dropdown {
+  width: 220px;
+  user-select: none;
+  /* border: 1px solid red; */
+  position: relative;
+}
+select {
+  padding: 15px 30px;
+  color: var(--body_color);
+  outline: none;
+  background-color: var(--body_elementsbg);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+select option {
+  margin-top: 2rem;
+  /* height: 50px; */
+  background-color: var(--body_elementsbg);
+}
+select option:hover {
+  background-color: none;
+}
+
+@media (max-width: 768px) {
+  .input-search-dropdown {
+    display: block;
+  }
+  form {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+}

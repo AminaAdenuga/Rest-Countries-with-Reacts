@@ -1,0 +1,19 @@
+.Appse {
+  color: var(--body_color);
+  background-color: var(--body_elementsbg);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  padding: 1.5rem 0;
+}
+.header-divs {
+  max-width: 80%;
+  text-align: center;
+  margin: 0 auto;
+}
+.link {
+  color: rgb(245, 78, 106);
+}
+.footer {
+  display: flex;
+  align-items: center;
+  height: 20px;
+}
