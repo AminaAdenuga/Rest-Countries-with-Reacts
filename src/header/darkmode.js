@@ -26,8 +26,6 @@ function DarkTheme() {
         <div onClick={handleChangeDarkTheme}>
           <img alt="mode" width="20px" src={lightMode ? sun : moon} />
         </div>
-
-        <p className="font-semibold">Dark Mode</p>
       </div>
     </div>
   );

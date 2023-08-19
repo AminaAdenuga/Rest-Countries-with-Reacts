@@ -11,7 +11,7 @@ function FormInput(props) {
   const submitHandler = (event) => {
     event.preventDefault();
     props.sendSearchParam(input);
-    setInput("");
+    // setInput("");
   };
 
   return (
